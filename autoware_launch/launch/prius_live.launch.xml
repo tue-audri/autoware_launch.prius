@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="use_sim_time" default="true" description="use simulation time"/>
+  <arg name="use_sim_time" default="false" description="use simulation time"/>
   <arg name="map_path" description="point cloud and lanelet2 map directory path"/>
   <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/>
   <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/>
@@ -66,6 +66,7 @@
       <arg name="pointcloud_map_file" value="$(var pointcloud_map_file)"/>
       <!-- System -->
       <arg name="launch_system" value="$(var system)"/>
+      <arg name="system_run_mode" value="online"/>
       <arg name="launch_system_monitor" value="$(var launch_system_monitor)"/>
       <arg name="launch_dummy_diag_publisher" value="$(var launch_dummy_diag_publisher)"/>
       <arg name="diagnostic_graph_aggregator_graph_path" value="$(find-pkg-share autoware_launch)/config/system/diagnostic_graph_aggregator/autoware-awsim.yaml"/>

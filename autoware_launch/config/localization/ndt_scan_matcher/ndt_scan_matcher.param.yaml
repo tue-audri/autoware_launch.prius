@@ -35,7 +35,7 @@
       max_iterations: 30
 
       # Number of threads used for parallel computing
-      num_threads: 4
+      num_threads: 6
 
       regularization:
         enable: false
@@ -82,7 +82,7 @@
 
       # If converged_param_type is 1
       # Threshold for deciding whether to trust the estimation result
-      converged_param_nearest_voxel_transformation_likelihood: 2.3
+      converged_param_nearest_voxel_transformation_likelihood: 1.3 #2.3
 
       # Scan matching score based on no ground LiDAR scan
       no_ground_points:
