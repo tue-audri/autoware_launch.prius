@@ -47,6 +47,6 @@
     rrtstar:
       enable_update: true
       use_informed_sampling: true
-      max_planning_time: 150.0
-      neighbor_radius: 8.0
+      max_planning_time: 2000.0
+      neighbor_radius: 50.0
       margin: 0.1
