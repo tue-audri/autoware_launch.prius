@@ -6,6 +6,12 @@
         optional:
           name: "detected_objects"
           short_name: "all"
+      dummy_objects:
+        topic: "/perception/object_recognition/detection/dummy_objects"
+        can_spawn_new_tracker: true
+        optional:
+          name: "dummy_objects"
+          short_name: "dummy"
       # LIDAR - rule-based
       lidar_clustering:
         flags:
