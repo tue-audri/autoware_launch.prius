@@ -6,16 +6,16 @@
       unknown: 10.0 #[s]
     lateral_control_time_horizon: 5.0 #[s]
     prediction_sampling_delta_time: 0.5 #[s]
-    min_velocity_for_map_based_prediction: 1.0 #[m/s]
+    min_velocity_for_map_based_prediction: 5.0 #[m/s] Previously 1.0
     min_crosswalk_user_velocity: 1.39 #[m/s]
     max_crosswalk_user_delta_yaw_threshold_for_lanelet: 0.785 #[m/s]
     max_crosswalk_user_on_road_distance: 2.0  # [m] crosswalk users on road or shoulder lanelets are only predicted to cross the crosswalk if they are within this distance
-    dist_threshold_for_searching_lanelet: 3.0 #[m]
+    dist_threshold_for_searching_lanelet: 1.5 #[m] Previously 3.0
     delta_yaw_threshold_for_searching_lanelet: 0.785 #[rad]
     sigma_lateral_offset: 0.5 #[m]
     sigma_yaw_angle_deg: 5.0 #[angle degree]
     object_buffer_time_length: 2.0 #[s]
-    history_time_length: 1.0 #[s]
+    history_time_length: 3.0 #[s] Previously 1.0
     check_lateral_acceleration_constraints: false # whether to check if the predicted path complies with lateral acceleration constraints
     max_lateral_accel: 2.0 # [m/ss] max acceptable lateral acceleration for predicted vehicle paths
     min_acceleration_before_curve: -2.0 # [m/ss] min acceleration a vehicle might take to decelerate before a curve
