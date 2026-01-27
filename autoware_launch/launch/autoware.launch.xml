@@ -95,8 +95,9 @@
 
   <!-- Localization -->
   <group if="$(var launch_localization)">
-    <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_localization_component.launch.xml"/>
+    <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_localization_component.launch.xml">
       <arg name="input_pointcloud" value="/sensing/radar/concatenated/pointcloud"/>
+      <!-- <arg name="input_pointcloud" value="/sensing/lidar/concatenated/pointcloud"/> -->
     </include>
   </group>
 
