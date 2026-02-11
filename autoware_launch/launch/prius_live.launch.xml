@@ -25,7 +25,17 @@
   <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
   <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
   <!-- Perception -->
-  <arg name="traffic_light_recognition/camera_namespaces" default="[traffic_light]" description="traffic light recognition namespace"/>  <!-- Control -->
+  <arg name="traffic_light_recognition/camera_namespaces" default="[traffic_light]" description="traffic light recognition namespace"/> 
+  <arg name="perception_mode" default="camera_lidar_fusion" description="select perception mode. camera_lidar_radar_fusion, camera_lidar_fusion, lidar_radar_fusion, lidar, radar"/>
+  <arg name="lidar_detection_model" default="bevfusion" description="If the model name is not declared, the default model in perception.launch.xml will be used"/>
+  <!-- <arg name="image_raw0" default="/sensing/camera/traffic_light/pylon_ros2_camera_node/image_rect" description="image raw topic name"/>
+  <arg name="camera_info0" default="/sensing/camera/traffic_light/camera_info" description="camera info topic name"/> -->
+  <arg name="segmentation_pointcloud_fusion_camera_ids" default="[0]" description="list of camera ids used for segmentation_pointcloud_fusion node"/>
+  <arg name="camera_vru_detector_rois_ids" default="[0]" description="list of rois ids used for detecting VRU."/>
+  <arg name="use_camera_vru_detector" default="true" description="enable pipeline for camera VRU object detection"/>
+  <!-- Radar Settings-->
+  <!-- <arg name="pipeline_type" default="tracks" description="Choice of radar pre-processing pipeline. Possible choices: pointcloud, tracks, both"/> -->
+  <!-- Control -->
   <!-- Vehicle -->
   <arg name="launch_vehicle_interface" default="false"/>
   <!-- System -->
