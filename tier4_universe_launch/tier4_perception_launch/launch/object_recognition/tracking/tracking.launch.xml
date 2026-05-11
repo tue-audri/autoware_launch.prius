@@ -52,6 +52,8 @@
   <arg name="input/camera_only/channel" default="camera_streampetr"/>
   <arg name="input/camera_vru/channel" default="camera_vru"/>
   <arg name="input/camera_vru/objects" default="/perception/object_recognition/detection/camera_vru/objects"/>
+  <arg name="input/dummy_injection/channel" default="dummy_objects"/>
+  <arg name="input/dummy_injection/objects" default="/perception/object_recognition/detection/dummy_objects"/>
 
   <arg name="output/objects" default="$(var ns)/objects"/>
   <arg name="output/merged_objects" default="$(var ns)/merged_objects"/>
@@ -143,6 +145,9 @@
     <let name="input/detection09/channel" value="$(var input/camera_only/channel)"/>
     <let name="input/detection09/objects" value="$(var input/camera_only/objects)"/>
 
+    <let name="input/detection10/channel" value="$(var input/dummy_injection/channel)"/>
+    <let name="input/detection10/objects" value="$(var input/dummy_injection/objects)"/>
+
     <!-- camera lidar -->
     <group scoped="false" if="$(eval '&quot;$(var mode)&quot;==&quot;camera_lidar_fusion&quot;')">
       <!-- radar far object is not used -->
@@ -189,6 +194,8 @@
       <arg name="input/detection07/channel" value="$(var input/detection07/channel)"/>
       <arg name="input/detection08/objects" value="$(var input/detection08/objects)"/>
       <arg name="input/detection08/channel" value="$(var input/detection08/channel)"/>
+      <arg name="input/detection10/objects" value="$(var input/detection10/objects)"/>
+      <arg name="input/detection10/channel" value="$(var input/detection10/channel)"/>
       <arg name="output/objects" value="$(var output/objects)"/>
       <arg name="output/merged_objects" value="$(var output/merged_objects)"/>
       <arg name="data_association_matrix_path" value="$(var object_recognition_tracking_multi_object_tracker_data_association_matrix_param_path)"/>
